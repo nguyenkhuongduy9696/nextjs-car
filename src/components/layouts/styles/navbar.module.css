@@ -1,0 +1,24 @@
+.navbar {
+  height: 70px;
+  background-color: #ed1c24;
+  color: #ffffff;
+}
+
+.navbar .container {
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar .menu_mobile {
+  z-index: 2
+}
+
+.navbar .menu_mobile .sideBar {
+  width: 260px;
+}
+
+.navbar .menu_mobile .background {
+  background-color: rgba(11, 11, 11, 0.6);
+  width: calc(100vw - 260px);
+}
