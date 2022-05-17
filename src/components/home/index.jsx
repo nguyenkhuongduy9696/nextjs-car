@@ -35,7 +35,6 @@ const HomePage = () => {
     () => getForecast(),
     {keepPreviousData: true, staleTime: Infinity}
   );
-  console.log(data);
 
   useEffect(() => {
     const timer = setInterval(() => {
