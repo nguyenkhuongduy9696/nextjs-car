@@ -3,14 +3,20 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false;
 import './../src/plugins/fontawesome';
-import Navbar from '../src/components/layouts/Navbar';
+import {QueryClient, QueryClientProvider, Hydrate} from 'react-query';
+import {useState} from 'react';
 
 function MyApp({ Component, pageProps }) {
+  const [queryClient] = useState(() => new QueryClient());
+
   return(
-    <>
-      <Navbar />
-      <Component { ...pageProps } />
-    </>
+    <QueryClientProvider client={ queryClient }>
+      <Hydrate state={ pageProps.dehydratedState }>
+        <div className='layout px-3'>
+          <Component { ...pageProps } />
+        </div>
+      </Hydrate>
+    </QueryClientProvider>
   );
 }
 

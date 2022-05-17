@@ -7,7 +7,14 @@ html, body {
   margin: 0;
   box-sizing: border-box;
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
-  background-color: rgb(245, 245, 245);
+  font-family: 'Nunito', sans-serif;
+  background: #eef5f9;
+  /*background: linear-gradient(42deg, rgba(9,188,193,1) 0%, rgba(30,199,199,1) 44%, rgba(30,195,230,1) 100%);*/
+}
+
+.layout {
+  min-height: 100vh;
+  max-width: 1250px;
+  margin: 0 auto;
 }
 

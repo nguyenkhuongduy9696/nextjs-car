@@ -1,0 +1,1 @@
+export const FORECAST_KEY = 'forecast_key';
